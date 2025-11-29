@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ClothingBrowser from "./ClothingBrowser.jsx";
 
 function App() {
   const [message, setMessage] = useState("Loading message...");
@@ -19,22 +20,12 @@ function App() {
       });
   }, []);
 
-  return (
-    <main className="page">
-      <section className="card">
-        <p className="eyebrow">Flask + Vite + React</p>
-        <h1>Full-stack starter</h1>
-        <p className="lead">
-          This frontend uses Vite and proxies <code>/api</code> to a Flask
-          backend running on <code>localhost:5000</code>.
-        </p>
-        <div className="status">
-          <span className="label">API status</span>
-          <p className="message">{error || message}</p>
+    return (
+        <div>
+            <h1>Clothing Demo</h1>
+            <ClothingBrowser />
         </div>
-      </section>
-    </main>
-  );
+    );
 }
 
 export default App;
